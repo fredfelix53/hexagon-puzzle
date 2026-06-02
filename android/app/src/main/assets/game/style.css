@@ -1,0 +1,106 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+  background: #0f1020;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#gameContainer {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 8px;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+#header h1 { font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #a29bfe, #6c5ce7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+#scoreBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; flex: 1; min-width: 50px; }
+.stat-item .label { font-size: 10px; color: #888; text-transform: uppercase; }
+.stat-item .value { font-size: 16px; font-weight: 700; }
+#scoreBar button {
+  background: #4facfe;
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #0f1020;
+  touch-action: none;
+}
+#gameOverScreen {
+  display: none;
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center; align-items: center;
+  flex-direction: column;
+  z-index: 100;
+}
+#gameOverScreen h2 { font-size: 32px; margin-bottom: 12px; color: #a29bfe; }
+#gameOverScreen p { font-size: 18px; margin: 4px 0; }
+#gameOverScreen button {
+  margin-top: 16px;
+  padding: 12px 40px;
+  background: #4facfe;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#shopBtn {
+  position: fixed; top: 8px; right: 8px;
+  background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+  border: none; border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 14px; font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  z-index: 50;
+}
+.progress-bar {
+  width: 100%;
+  max-width: 480px;
+  margin: 4px auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #888;
+}
+.progress-bar .bar { flex:1; height:6px; background:#1a1a2e; border-radius:3px; overflow:hidden; }
+.progress-bar .bar .fill { height:100%; background:linear-gradient(90deg,#a29bfe,#6c5ce7); border-radius:3px; transition:width 0.3s; }
+#levelInfo { font-size: 12px; color: #888; }

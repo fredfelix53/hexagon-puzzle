@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hexagon Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="shopBtn" onclick="ShopUI.open()">🛒 Shop</button>
+  <div id="gameContainer">
+    <div id="header">
+      <h1>⬡ Hexagon Puzzle</h1>
+      <span id="levelInfo">10 rows</span>
+    </div>
+    <div id="scoreBar">
+      <div class="stat-item"><div class="label">Score</div><div class="value" style="color:#a29bfe" id="score">0</div></div>
+      <div class="stat-item"><div class="label">Rows</div><div class="value" id="rowsCleared">0</div></div>
+      <div class="stat-item"><div class="label">Placed</div><div class="value" id="piecesPlaced">0</div></div>
+      <button id="newGame">🔄 New</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div class="progress-bar">
+      <span>Lv.<span id="playerLevel">1</span></span>
+      <div class="bar"><div class="fill" id="xpFill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <div id="gameOverScreen">
+    <h2>⬡ Game Over</h2>
+    <p>Score: <span id="finalScore">0</span></p>
+    <p>Rows Cleared: <span id="finalRows">0</span></p>
+    <p>Pieces Placed: <span id="finalPieces">0</span></p>
+    <button onclick="HexPuzzle.restartGame()">🔄 Play Again</button>
+  </div>
+
+  <div id="notification"></div>
+
+  <script src="visuals.js"></script>
+  <script src="progression.js"></script>
+  <script src="shop.js"></script>
+  <script src="ads-manager.js"></script>
+  <script src="challenges-system.js"></script>
+  <script src="store-rotator.js"></script>
+  <script src="retention-system.js"></script>
+  <script src="collectibles-system.js"></script>
+  <script src="tutorial-system.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
